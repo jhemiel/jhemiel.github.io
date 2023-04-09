@@ -1,11 +1,17 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
+/* @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Source+Sans+Pro:ital@0;1&display=swap'); */
 
 /*
 	Strata by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
+@font-face {
+	font-family: 'Barlow';
+	src: url(../../assets/webfonts/barlow.medium.ttf);
+}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -22,8 +28,10 @@ section, summary, time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
+	vertical-align: baseline;
 	font: inherit;
-	vertical-align: baseline;}
+	font-family: 'Source Sans Pro', sans-serif;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -98,7 +106,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #a2a2a2;
+		color: #333333;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -111,18 +119,19 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #49bf9d;
+		color: #ffffff;
 		text-decoration: none;
+		font-family: 'Barlow';
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #49bf9d !important;
+			color: #ffffff !important;
 			text-decoration: none;
 		}
 
 	strong, b {
-		color: #787878;
+		color: #333333;
 		font-weight: 400;
 	}
 
@@ -135,10 +144,11 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #787878;
+		color: #333333;
 		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 1em 0;
+		font-family: 'Barlow', sans-serif;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1817,15 +1827,16 @@ input, select, textarea {
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: #f7f7f7;
+		background: #ffffff;
 		border-radius: 0.35em;
-		border: solid 2px transparent;
+		border: solid 2px #dadada;
 		color: inherit;
 		display: block;
 		outline: 0;
 		padding: 0 0.75em;
 		text-decoration: none;
 		width: 100%;
+		font-size: 14pt;
 	}
 
 		input[type="text"]:invalid,
@@ -1841,7 +1852,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #49bf9d;
+			border-color: #a7a7a7;
 		}
 
 	select {
@@ -2125,7 +2136,7 @@ input, select, textarea {
 
 		.image.fit {
 			display: block;
-			margin: 0 0 2em 0;
+			margin: 0 0 1em 0;
 			width: 100%;
 		}
 
@@ -2243,13 +2254,15 @@ input, select, textarea {
 
 	ul.actions {
 		display: -moz-flex;
-		display: -webkit-flex;
 		display: -ms-flex;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		cursor: default;
 		list-style: none;
 		margin-left: -1em;
 		padding-left: 0;
+		margin-top: 2em;
 	}
 
 		ul.actions li {
@@ -2443,10 +2456,10 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		background-color: transparent;
+		background-color: #333333;
 		border-radius: 0.35em;
-		border: solid 3px #efefef;
-		color: #787878 !important;
+		border: solid 3px #333333;
+		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 400;
@@ -2458,23 +2471,24 @@ input, select, textarea {
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+		text-transform: uppercase;
 	}
 
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			background-color: #ffffff;
+			border: solid 3px #333333;
+			color: #333333 !important;
 		}
 
 		input[type="submit"]:active,
 		input[type="reset"]:active,
 		input[type="button"]:active,
 		.button:active {
-			background-color: rgba(73, 191, 157, 0.1);
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			background-color: #ffffff;
+			color: #333333 !important;
 		}
 
 		input[type="submit"].icon,
@@ -2636,6 +2650,7 @@ input, select, textarea {
 			font-size: 1.35em;
 			line-height: 1.75em;
 			margin: 0;
+			font-family: 'Source Sans Pro', sans-serif;
 		}
 
 		#header .image.avatar {
@@ -2689,7 +2704,7 @@ input, select, textarea {
 	}
 
 		#main > section {
-			border-top: solid 2px #efefef;
+			border-top: solid 2px #a9a9a9;
 			margin: 4em 0 0 0;
 			padding: 4em 0 0 0;
 		}
@@ -2985,7 +3000,7 @@ input, select, textarea {
 		/* Basic */
 
 			body, input, select, textarea {
-				font-size: 12pt;
+				font-size: 12pt !important;
 			}
 
 	}
@@ -3219,3 +3234,64 @@ input, select, textarea {
 			}
 
 	}
+
+/* ADDED CSS */
+.window {
+	width: 400px;
+	margin: auto;
+	border-radius: 5px;
+	box-shadow: 8px 5px 46px 2px #d1d1d1;
+	cursor: pointer;
+}
+  
+.window img {
+	width: 100%;
+	object-fit: cover;
+	object-position: top;
+	height: 270px;
+	transition: 10s all ease;
+}
+  
+.window img:hover, .window:hover img{
+	object-position: bottom;
+}
+
+section#two h3 {
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.emphasize{ 
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+section#three ul.labeled-icons li a {
+    font-size: 15pt;
+    font-weight: 500;
+    font-family: 'Barlow';
+	border-bottom: none;
+}
+
+section#three ul.labeled-icons li * {
+    color: #333333;
+}
+
+section#three ul.labeled-icons li {
+    font-size: 16pt;
+    font-family: 'Barlow';
+}
+
+section#three ul.labeled-icons li:not(:first-child) {
+    margin-top: 1em;
+}
+
+section#three ul.labeled-icons li a:hover {
+    color: #333333 !important;
+}
+
+section#two ul.actions{
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+		justify-content: center;
+}
