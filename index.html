@@ -111,8 +111,9 @@
 										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
 									</div>
 								</form>
+								<p id="form_message"></p>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type="submit" id="form_submit" value="Send Message" /></li>
 								</ul>
 							</div>
 							<div class="col-4 col-12-small">
@@ -165,6 +166,24 @@
 			<script>
 				let date = new Date();
 				jQuery('#cr_year').text(date.getFullYear());
+
+				jQuery('#form_submit').click(function(){
+					jQuery('form').hide();
+					jQuery('#form_message').text('Sending message..');
+					
+					$.ajax({
+						type: "POST",
+						url: "send_email.php",
+						data: {
+							'name': jQuery('#name').val(),
+							'email' : jQuery('#email').val(),
+							'message' : jQuery('#message').val()
+						},
+						success: function(data) {
+							jQuery('#form_message').text(data);
+						}
+					});
+				})
 			</script>
 
 	</body>
